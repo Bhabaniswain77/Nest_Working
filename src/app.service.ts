@@ -9,7 +9,6 @@ export class AppService {
 
 @Injectable()
 export class NewApp {
-  // Method to fetch user data
   async findAll(): Promise<{ id: number; name: string }[]> {
     return [
       { id: 1, name: 'Item 1' },
@@ -17,7 +16,6 @@ export class NewApp {
     ];
   }
 
-  // Method to fetch user info
   getUser(): string {
     return 'Fetching user data...';
   }
