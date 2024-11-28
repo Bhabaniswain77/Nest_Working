@@ -6,7 +6,7 @@ import { CatsController } from './cats.controller';
 
 @Module({
   imports: [],
-  controllers: [AppController,CatsController],
-  providers: [AppService,NewApp],
+  controllers: [AppController, CatsController],
+  providers: [AppService, NewApp],
 })
 export class AppModule {}

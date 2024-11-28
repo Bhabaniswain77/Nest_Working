@@ -1,15 +1,23 @@
-
-import { Controller, Get, Query, Post, Body, Put, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Query,
+  Post,
+  Body,
+  Put,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { CreateCatDto, UpdateCatDto, ListAllEntities } from './dto';
 
 @Controller('cats')
 export class CatsController {
-  @Post("/inputPussy")
+  @Post('/inputPussy')
   create(@Body() createCatDto: CreateCatDto) {
     return 'This action adds a new cat';
   }
 
-  @Get("/pussy")
+  @Get('/pussy')
   findAll(@Query() query: ListAllEntities) {
     return `This action returns all cats (limit: ${query.limit} items)`;
   }

@@ -8,7 +8,7 @@ export class AppController {
     private readonly appService: AppService,
     private readonly newApp: NewApp,
   ) {}
-  
+
   @Get()
   getHello(): string {
     return this.appService.getHello();
@@ -16,6 +16,6 @@ export class AppController {
 
   @Get('/new')
   async getUser(): Promise<{ id: number; name: string }[]> {
-    return this.newApp.findAll(); 
+    return this.newApp.findAll();
   }
 }
